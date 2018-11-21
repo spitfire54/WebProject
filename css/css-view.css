@@ -1,0 +1,32 @@
+/*
+Chris Chuck
+(Job/Assignment #)
+(Job/Assignment Title)
+
+(page title, describe this page and where it goes)
+(describe this page and what it does)
+(describe other details)
+*/
+
+/*------------------------------------*\
+  #applies to current page
+\*------------------------------------*/
+table{
+  border: solid 2pt black;
+  padding: 20px;
+  background: gray;
+}
+
+#bodyList td:nth-child(1), thead{
+  border: solid 1pt black;
+  width: 175px;
+  text-align: center;
+  background: white;
+}
+
+#bodyList td:nth-child(2){
+  border: solid 1pt black;
+  padding: 10px;
+  width: 250px;
+  background: white;
+}

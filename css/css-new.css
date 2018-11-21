@@ -1,0 +1,36 @@
+/*
+Chris Chuck
+Final Web Project
+A shop for things
+
+new account page
+css for creating a new account specifically
+
+*/
+
+/*------------------------------------*\
+  #applies to current page
+\*------------------------------------*/
+#section1{
+  width: 100%
+}
+#section2{
+  width: 100%
+}
+#section3{
+  float: left;
+  width: 50%;
+}
+
+#section4{
+  float: right;
+  border-left: solid 1pt gray;
+  width: 50%;
+}
+#section5{
+  width: 100%;
+}
+
+#formRegister{
+  float: inside;
+}

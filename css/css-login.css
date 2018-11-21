@@ -1,0 +1,29 @@
+/*
+Chris Chuck
+Final Web Project
+A shop for things
+
+login page
+css for login specifically
+
+*/
+
+/*------------------------------------*\
+  #applies to current page
+\*------------------------------------*/
+
+form{
+  padding-top: 100px;
+  margin: auto;
+  width: 50%;
+}
+
+fieldset{
+  background-color: lightgray;
+}
+
+legend{
+  background-color: lightgray;
+  border: solid 1pt black;
+  padding: 5px 15px;
+}
