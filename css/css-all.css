@@ -99,3 +99,11 @@ header li.acct-dropdown{
   display: block;
   text-align: left;
 }
+
+footer{
+  float: bottom;
+  bottom: 20px;
+  background-color: grey;
+  margin-top: 20px;
+  padding: 10px;
+}

@@ -20,17 +20,37 @@ css for creating a new account specifically
 #section3{
   float: left;
   width: 50%;
+  text-align: center;
 }
 
 #section4{
   float: right;
   border-left: solid 1pt gray;
   width: 50%;
+  text-align: center;
 }
 #section5{
   width: 100%;
 }
 
+#section6{
+  width: 100%;
+  text-align: center;
+}
+
 #formRegister{
   float: inside;
+  margin: auto;
+}
+
+@media(max-width: 500px){
+  #formRegister{
+    width: 100%;
+  }
+}
+
+@media(min-width: 1000px){
+  #formRegister{
+    width: 50%;
+  }
 }

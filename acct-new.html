@@ -39,115 +39,153 @@ should obviously save info and remember that someone is logged in
 
 
 <main>
-<article>
-  <h2>Account Registration</h2>
-  <form id="formRegister" action="acct-view.html" onsubmit="return checkForm()">
-    <fieldset>
-      
-      <table id="section1">
-        <caption><h3>1. User Info</h3><hr></caption>
-        <tr>
-          <td colspan="2"><label><strong>Username</strong></label><br>
-            <input type="text" name="user" size="25" required/></td>
-        </tr>
-        <tr>
-          <td><label><strong>First Name</strong></label><br/>
-            <input type="text" name="namef" size="25" required/><br/></td>
-          <td><label><strong>Last Name</strong></label><br/>
-            <input type="text" name="namel" size="25" required/></td>
-        </tr>
-        <tr>
-          <td colspan="2"><label><strong>Email</strong></label><br/>
-            <input type="email" name="email" size="80" required/></td>
-        </tr>
-        <tr>
-          <td><label><strong>Password</strong></label><br/>
-            <input type="password" name="password" size="25" pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}" 
-                   title="Must contain at least one number and one uppercase and lowercase letter, and at least 8 or more characters"
-                   required/></td>
-          <td><label><strong>Password Repeat</strong></label><br/>
-            <input type="password" name="passcheck" size="25" required/></td>
-        </tr>
-      </table>
+  <article>
+    <h2>Account Registration</h2>
+    <form id="formRegister" action="acct-view.html" onsubmit="return checkForm()">
+      <fieldset>
 
-      <table id="section2">
-        <caption><h3>2. Location Info</h3><hr></caption>
-        <tr>
-          <td colspan="3">
-            <label><strong>Address</strong></label><br/>
-            <input type="text" name="address" size="80" required/>
-          </td>
-        </tr>
-        <tr>
-          <td><label><strong>City</strong></label><br/>
-            <input type="text" name="city" required/></td>
-          <td><label><strong>State</strong></label><br/>
-            <input type="text" name="state" size="5" pattern="[A-Za-z]{2}" required/></td>
-          <td><label><strong>Zip</strong></label><br/>
-            <input type="text" name="zip" size="10" pattern="[0-9]{5}" required/></td>
-        </tr>
-        <tr>
-          <td><label><strong>Telephone</strong></label><br/>
-            <input type="tel" name="tel" placeholder="(###)-###-####" required/></td>
-          <td>
-            <label><strong>Country</strong></label><br/>
-            <select name="location"><optgroup label="Choose a country"></optgroup>
-              <option>Canada</option><option>Finland</option><option>France</option>
-              <option>India</option><option>South Korea</option>
-              <option>United Kingdom</option><option>United States</option>
-            </select>
-          </td><td></td>
-        </tr>
-      </table>
+        <table id="section1">
+          <caption><h3>1. User Info</h3><hr></caption>
+          <tr>
+            <td colspan="2"><label><strong>Username</strong></label><br>
+              <input type="text" name="user" size="25" required/></td>
+          </tr>
+          <tr>
+            <td><label><strong>First Name</strong></label><br/>
+              <input type="text" name="namef" size="25" required/><br/></td>
+            <td><label><strong>Last Name</strong></label><br/>
+              <input type="text" name="namel" size="25" required/></td>
+          </tr>
+          <tr>
+            <td colspan="2"><label><strong>Email</strong></label><br/>
+              <input type="email" name="email" size="80" placeholder="something@domain.com" required/></td>
+          </tr>
+          <tr>
+            <td><label><strong>Password</strong></label><br/>
+              <input type="password" name="password" size="25" pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}" 
+                     title="Must contain at least one number and one uppercase and lowercase letter, and at least 8 or more characters"
+                     required/></td>
+            <td><label><strong>Password Repeat</strong></label><br/>
+              <input type="password" name="passcheck" size="25" title="Passwords must match" required/></td>
+          </tr>
+        </table>
 
-      <table id="section3">
-        <caption><h3><strong>3. Personal Details</strong></h3><hr></caption>
-        <tr>
-          <td colspan="2"><label><strong>Birthday</strong></label><br/>
-            <input type="date" name="bday" required/></td>
-        </tr>
-        <tr>
-          <td><br><label><strong>Rate this Site</strong></label><br/>Hate it
-            <input type="range" min="0" max="10" step="1" name="rate"/>
-            Love it</td><td></td>
-        </tr>
-      </table>
-      
-      <table id="section4">
-        <caption><h3>4. Donation Details</h3><hr></caption>
-        <tr>
-          <td><label><strong>Favorite Charity</strong></label><br>
-            <select name="charity"><optgroup label="Choose a Charity"></optgroup>
-              <option>Direct Relief</option><option>MAP International</option>
-              <option>The Conservation Fund</option><option>Americares</option>
-              <option>Medecins Sans Frontieres</option>
-            </select></td>
-        </tr>
-        <tr>
-          <td><br><label><strong>Most Notable Donation</strong></label><br>
-            $<input type="text" name="donation" required size="5"/>.00</td>
-        </tr>
-      </table>
+        <table id="section2">
+          <caption><h3>2. Location Info</h3><hr></caption>
+          <tr>
+            <td colspan="3">
+              <label><strong>Address</strong></label><br/>
+              <input type="text" name="address" size="80" required/>
+            </td>
+          </tr>
+          <tr>
+            <td><label><strong>City</strong></label><br/>
+              <input type="text" name="city" required/></td>
+            <td><label><strong>State</strong></label><br/>
+              <input type="text" name="state" size="5" placeholder="AA" pattern="[A-Za-z]{2}" required/></td>
+            <td><label><strong>Zip</strong></label><br/>
+              <input type="text" name="zip" size="10" placeholder="#####" pattern="[0-9]{5}" required/></td>
+          </tr>
+          <tr>
+            <td><label><strong>Telephone</strong></label><br/>
+              <input type="tel" name="tel" placeholder="(###)-###-####" required/></td>
+            <td>
+              <label><strong>Country</strong></label><br/>
+              <select name="location"><optgroup label="Choose a country"></optgroup>
+                <option>United States</option><option>Finland</option><option>France</option>
+                <option>India</option><option>South Korea</option>
+                <option>United Kingdom</option><option>Canada</option>
+              </select>
+            </td><td></td>
+          </tr>
+        </table>
 
-      <table id="section5">
-        <caption><h3><strong>5. Finishing Up</strong></h3><hr></caption>
-        <tr>
-          <td><input type="checkbox" name="EULAagree" required/>
-            <label>I agree to the <a href="https://policies.google.com/terms?hl=en">
-                Terms of the Site</a></label><br/></td>
-        </tr>
-        <tr>
-          <td><br><button type="submit">Sign Up!</button><br></td>
-        </tr>
-      </table>
-    </fieldset>
-  </form>
-</article>
+        <table id="section3">
+          <caption><h3><strong>3. Personal Details</strong></h3><hr></caption>
+          <tr>
+            <td colspan="2"><label><strong>Birthday</strong></label><br/>
+              <input type="date" name="bday" required/></td>
+          </tr>
+          <tr>
+            <td><br><label><strong>Rate this Site</strong></label><br/>Hate it (1)
+              <input type="range" min="0" max="10" step="1" name="rate"/>
+              (10) Love it</td><td></td>
+          </tr>
+        </table>
+
+        <table id="section4">
+          <caption><h3>4. Donation Details</h3><hr></caption>
+          <tr>
+            <td><label><strong>Favorite Charity</strong></label><br>
+              <select name="charity"><optgroup label="Choose a Charity"></optgroup>
+                <option>Direct Relief</option><option>MAP International</option>
+                <option>The Conservation Fund</option><option>Americares</option>
+                <option>Medecins Sans Frontieres</option>
+              </select></td>
+          </tr>
+          <tr>
+            <td><br><label><strong>Most Notable Donation</strong></label><br>
+              $<input type="text" name="donation" placeholder="$$$$" required size="5"/>.00</td>
+          </tr>	
+        </table>
+
+
+        <table id="section5">
+          <caption><h3><strong>5. Card Information</strong></h3><hr></caption>
+          <tr>
+            <td><label><strong>Card Number</strong></label><br/>
+              <input type="text" name="card#" size="40" required/>
+            </td>
+            <td><label><strong>CVV Code</strong></label><br/>
+              <input type="text" name="cardCvv" size="5" placeholder="###" pattern="[0-9]{3}" required/>
+            </td><td></td>
+          </tr>
+          <tr>
+            <td><label><strong>First Name on card</strong></label><br/>
+              <input type="text" name="cardNamef" size="40" required/></td>
+            <td colspan="2"><label><strong>Last Name on card</strong></label><br/>
+              <input type="text" name="cardNamel" size="40" required/></td>
+          </tr>
+          <tr>
+            <td>
+              <label><strong>Card Type</strong></label><br/>
+              <select name="cardType" >
+                <option>Visa</option>
+                <option>Master Card</option>
+                <option>American Express</option>
+                <option>Discover</option>
+              </select>
+            </td>
+            <td><label><strong>Expiration Date</strong></label><br/>
+              <div>
+                <input type="month" name="cardExpr" required/>
+              </div>
+            </td><td></td>
+        </table>
+
+
+        <table id="section6">
+          <caption><h3><strong>6. Finishing Up</strong></h3><hr></caption>
+          <tr>
+            <td><input type="checkbox" name="EULAagree" required/>
+              <label>I agree to the <a href="https://policies.google.com/terms?hl=en">
+                  Terms of the Site</a></label><br/></td>
+          </tr>
+          <tr>
+            <td><br><button type="submit">Sign Up!</button>
+              <input type="reset" value="Clear" />
+              <br></td>
+          </tr>
+        </table>
+
+      </fieldset>
+    </form>
+  </article>
 </main>
 
 
 <footer>
-  <h3>TODO write content</h3>
+  <p><em>All images are copyright to their owners. This is just a hypothetical site &copy; 2018 Copyright Charity Page</em></p>
 </footer>
 </body>
 </html>
