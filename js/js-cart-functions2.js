@@ -2,7 +2,7 @@
 
 var size = titles.length;
 var subtotal = 0;
-var shipping = 40;
+var shipping = 10;
 
 
 for (var i=0; i < size; i++)
@@ -16,7 +16,7 @@ for (var i=0; i < size; i++)
 tax = subtotal * .10;
 
 
-if (subtotal > 1000)
+if (subtotal > 50)
 {
 	shipping = 0;
 }
