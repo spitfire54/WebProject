@@ -48,23 +48,23 @@ should obviously save info and remember that someone is logged in
           <caption><h3>1. User Info</h3><hr></caption>
           <tr>
             <td colspan="2"><label><strong>Username</strong></label><br>
-              <input type="text" name="user" size="25" required/></td>
+              <input type="text" name="user" size="25" placeholder="JohnDoe123" required/></td>
           </tr>
           <tr>
             <td><label><strong>First Name</strong></label><br/>
-              <input type="text" name="namef" size="25" required/><br/></td>
+              <input type="text" name="namef" size="25" placeholder="John" required/><br/></td>
             <td><label><strong>Last Name</strong></label><br/>
-              <input type="text" name="namel" size="25" required/></td>
+              <input type="text" name="namel" size="25" placeholder="Doe" required/></td>
           </tr>
           <tr>
             <td colspan="2"><label><strong>Email</strong></label><br/>
-              <input type="email" name="email" size="80" placeholder="something@domain.com" required/></td>
+              <input type="email" name="email" size="80" placeholder="john.doe123@hotmail.com" required/></td>
           </tr>
           <tr>
             <td><label><strong>Password</strong></label><br/>
               <input type="password" name="password" size="25" pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}" 
                      title="Must contain at least one number and one uppercase and lowercase letter, and at least 8 or more characters"
-                     required/></td>
+                      placeholder="JohnDoe123" required/></td>
             <td><label><strong>Password Repeat</strong></label><br/>
               <input type="password" name="passcheck" size="25" title="Passwords must match" required/></td>
           </tr>
@@ -82,13 +82,13 @@ should obviously save info and remember that someone is logged in
             <td><label><strong>City</strong></label><br/>
               <input type="text" name="city" required/></td>
             <td><label><strong>State</strong></label><br/>
-              <input type="text" name="state" size="5" placeholder="AA" pattern="[A-Za-z]{2}" required/></td>
+              <input type="text" name="state" size="5" placeholder="MN" pattern="[A-Za-z]{2}" required/></td>
             <td><label><strong>Zip</strong></label><br/>
               <input type="text" name="zip" size="10" placeholder="#####" pattern="[0-9]{5}" required/></td>
           </tr>
           <tr>
             <td><label><strong>Telephone</strong></label><br/>
-              <input type="tel" name="tel" placeholder="(###)-###-####" required/></td>
+              <input type="tel" name="tel" placeholder="(###) ###-####" required/></td>
             <td>
               <label><strong>Country</strong></label><br/>
               <select name="location"><optgroup label="Choose a country"></optgroup>
@@ -125,7 +125,7 @@ should obviously save info and remember that someone is logged in
           </tr>
           <tr>
             <td><br><label><strong>Most Notable Donation</strong></label><br>
-              $<input type="text" name="donation" placeholder="$$$$" required size="5"/>.00</td>
+              $<input type="text" name="donation" placeholder="0" required size="5"/>.00</td>
           </tr>	
         </table>
 
@@ -134,17 +134,17 @@ should obviously save info and remember that someone is logged in
           <caption><h3><strong>5. Card Information</strong></h3><hr></caption>
           <tr>
             <td><label><strong>Card Number</strong></label><br/>
-              <input type="text" name="card#" size="40" required/>
+              <input type="text" name="card#" size="40" placeholder="**** **** ****" required/>
             </td>
             <td><label><strong>CVV Code</strong></label><br/>
-              <input type="text" name="cardCvv" size="5" placeholder="###" pattern="[0-9]{3}" required/>
+              <input type="text" name="cardCvv" size="5" placeholder="***" pattern="[0-9]{3}" required/>
             </td><td></td>
           </tr>
           <tr>
             <td><label><strong>First Name on card</strong></label><br/>
-              <input type="text" name="cardNamef" size="40" required/></td>
+              <input type="text" name="cardNamef" size="40" placeholder="John" required/></td>
             <td colspan="2"><label><strong>Last Name on card</strong></label><br/>
-              <input type="text" name="cardNamel" size="40" required/></td>
+              <input type="text" name="cardNamel" size="40" placeholder="Doe" required/></td>
           </tr>
           <tr>
             <td>
@@ -189,3 +189,4 @@ should obviously save info and remember that someone is logged in
 </footer>
 </body>
 </html>
+
